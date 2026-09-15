@@ -103,7 +103,7 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 
 .workflow-progress {
   display: grid;
-  grid-template-columns: repeat(11, minmax(0, 1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 8px;
   padding: 12px 20px;
   border-bottom: 1px solid var(--border);
@@ -121,11 +121,18 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   width: 22px; height: 22px; display: grid; place-items: center;
   border-radius: 999px;
   background: var(--bg-tertiary);
+  color: var(--text-secondary);
   font-size: 11px;
   font-weight: 800;
 }
 .progress-step.active { border-color: var(--accent); color: var(--text-primary); box-shadow: inset 0 0 0 1px rgba(34,211,238,0.15); }
+.progress-step.active span { color: var(--text-primary); background: color-mix(in srgb, var(--accent) 20%, var(--bg-tertiary)); }
 .progress-step.complete { color: var(--success); }
+.progress-step.complete span { color: var(--success); background: color-mix(in srgb, var(--success) 18%, var(--bg-tertiary)); }
+.progress-step.failed { color: var(--error); border-color: color-mix(in srgb, var(--error) 45%, var(--border)); }
+.progress-step.failed span { color: var(--error); background: color-mix(in srgb, var(--error) 18%, var(--bg-tertiary)); }
+.status-pill.state-failed { color: var(--error); border-color: color-mix(in srgb, var(--error) 45%, var(--border)); }
+.status-pill.state-completed { color: var(--success); border-color: color-mix(in srgb, var(--success) 45%, var(--border)); }
 
 .banner.error, .completion-card.error {
   margin: 12px 20px 0;
@@ -231,6 +238,8 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 }
 .feed-list strong { grid-column: 1 / -1; color: var(--accent); }
 .feed-list em { color: var(--text-secondary); font-style: normal; }
+.feed-list .status-pass { color: var(--success); }
+.feed-list .status-fail { color: var(--error); }
 
 .model-options { display: grid; gap: 9px; margin: 14px 0; }
 .model-option {

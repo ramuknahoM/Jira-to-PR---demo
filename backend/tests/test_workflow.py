@@ -70,7 +70,7 @@ def test_model_selector_uses_config_routes() -> None:
 
     selector = ModelSelectorAgent(load_app_config())
     selection = selector.select(ComplexityAssessment(score=2, level="LOW", explanation="test", estimated_files=1))
-    assert selection.provider == "gemini"
+    assert selection.provider == "groq"
     assert selection.model
 
 

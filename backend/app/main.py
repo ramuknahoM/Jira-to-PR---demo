@@ -32,6 +32,9 @@ _env_map = {
     "GEMINI_MODEL_LOW": settings.gemini_model_low,
     "GEMINI_MODEL_MEDIUM": settings.gemini_model_medium,
     "GEMINI_MODEL_HIGH": settings.gemini_model_high,
+    "GROQ_MODEL_LOW": settings.groq_model_low,
+    "GROQ_MODEL_MEDIUM": settings.groq_model_medium,
+    "GROQ_MODEL_HIGH": settings.groq_model_high,
     "JIRA_MCP_URL": settings.jira_mcp_url,
     "JIRA_MCP_TOKEN": settings.jira_mcp_token,
     "GIT_MCP_URL": settings.git_mcp_url,
@@ -107,6 +110,7 @@ async def health(request: Request) -> dict[str, object]:
         },
         "repository_configured": bool(session.git.repository_path if session else settings.repository_path),
         "gemini_configured": bool(settings.gemini_api_key),
+        "groq_configured": bool(settings.groq_api_key),
         "session_active": bool(session),
     }
 

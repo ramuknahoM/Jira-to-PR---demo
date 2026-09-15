@@ -126,7 +126,8 @@ class Orchestrator:
         )
         workflow.work_branch = branch_suggestion.suggested_work_branch
         self._audit(workflow, "scope_analyzer", "completed")
-        assessment_provider = self.gateway.provider("gemini", self.config.policy.model_routing[0].model if self.config.policy.model_routing else None)
+        first_route = self.config.policy.model_routing[0] if self.config.policy.model_routing else None
+        assessment_provider = self.gateway.provider(first_route.provider, first_route.model) if first_route else None
         workflow.complexity = await self.complexity.assess(workflow.jira_task, workflow.repository_analysis, assessment_provider)
         workflow.model_recommendation = self.model_selector.recommend(workflow.complexity)
         self._audit(workflow, "complexity", "completed")

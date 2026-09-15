@@ -3,10 +3,10 @@ from __future__ import annotations
 import httpx
 from fastapi import HTTPException
 
-from ..config_loader import MCPServerConfig
-from ..connection_models import GitConnectionConfig, JiraConnectionConfig
-from ..mcp.clients import ExternalMCPClient
-from . import direct_git, direct_jira
+from .config_loader import MCPServerConfig
+from .connection_models import GitConnectionConfig, JiraConnectionConfig
+from .integrations import direct_git, direct_jira
+from .mcp.clients import ExternalMCPClient
 
 
 async def validate_jira(config: JiraConnectionConfig) -> str:

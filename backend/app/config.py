@@ -12,6 +12,11 @@ class Settings(BaseSettings):
     gemini_model_low: str | None = None
     gemini_model_medium: str | None = None
     gemini_model_high: str | None = None
+    groq_api_key: str | None = None
+    groq_model: str = "llama-3.3-70b-versatile"
+    groq_model_low: str | None = None
+    groq_model_medium: str | None = None
+    groq_model_high: str | None = None
     jira_mcp_url: str | None = None
     jira_mcp_token: str | None = None
     git_mcp_url: str | None = None
@@ -32,4 +37,10 @@ def get_settings() -> Settings:
         object.__setattr__(settings, "gemini_model_medium", settings.gemini_model)
     if not settings.gemini_model_high:
         object.__setattr__(settings, "gemini_model_high", settings.gemini_model)
+    if not settings.groq_model_low:
+        object.__setattr__(settings, "groq_model_low", settings.groq_model)
+    if not settings.groq_model_medium:
+        object.__setattr__(settings, "groq_model_medium", settings.groq_model)
+    if not settings.groq_model_high:
+        object.__setattr__(settings, "groq_model_high", settings.groq_model)
     return settings

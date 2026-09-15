@@ -3,6 +3,8 @@ from __future__ import annotations
 import json
 import re
 
+from fastapi import HTTPException
+
 from ..config_loader import AppConfig
 from ..llm import LLMProvider
 from ..models import ComplexityAssessment, JiraTask, RepositoryAnalysis
@@ -24,7 +26,7 @@ class ComplexityAgent:
             return baseline
         try:
             return await self._assess_with_llm(task, repository, provider, baseline)
-        except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+        except (json.JSONDecodeError, KeyError, TypeError, ValueError, HTTPException):
             return baseline
 
     def _assess_keywords(self, task: JiraTask, repository: RepositoryAnalysis | None) -> ComplexityAssessment:

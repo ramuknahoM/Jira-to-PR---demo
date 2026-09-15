@@ -18,7 +18,7 @@ export function AgentActivityFeed({ workflow }: Props) {
             <li key={`${event.timestamp}-${event.action}`}>
               <strong>{event.agent}</strong>
               <span>{event.action}</span>
-              <em>{event.status}</em>
+              <em className={event.status === "failed" ? "status-fail" : event.status === "completed" ? "status-pass" : ""}>{event.status}</em>
             </li>
           ))}
         </ul>
@@ -29,7 +29,7 @@ export function AgentActivityFeed({ workflow }: Props) {
           {audit.map((event) => (
             <li key={`${event.timestamp}-${event.tool}`}>
               <strong>{event.server}.{event.tool}</strong>
-              <span>{event.status}</span>
+              <span className={event.status === "success" ? "status-pass" : event.status === "failed" || event.status === "error" ? "status-fail" : ""}>{event.status}</span>
               <em>{event.duration_ms}ms</em>
             </li>
           ))}

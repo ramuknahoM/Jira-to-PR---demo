@@ -1,0 +1,1345 @@
+[
+  {
+    "id": "ce51faa7-8def-4332-a9e3-7a7064dfa177",
+    "jira_key": "SCRUM-9",
+    "state": "FAILED",
+    "created_at": "2026-09-15T19:43:59.424042Z",
+    "updated_at": "2026-09-15T19:44:01.612455Z",
+    "error": "Gemini generation failed: HTTP 404.",
+    "jira_task": {
+      "key": "SCRUM-9",
+      "summary": "Create GET /hello_hi that returns a JSON greeting message.",
+      "description": "Create GET /hello_hi that returns a JSON greeting message.",
+      "issue_type": "Task",
+      "priority": "Medium",
+      "acceptance_criteria": []
+    },
+    "requirement_analysis": {
+      "problem_summary": "Create GET /hello_hi that returns a JSON greeting message.",
+      "functional_requirement": "Create GET /hello_hi that returns a JSON greeting message.",
+      "acceptance_criteria": [
+        "The behavior described by 'Create GET /hello_hi that returns a JSON greeting message.' is available to callers."
+      ],
+      "constraints": [
+        "Preserve existing repository conventions."
+      ],
+      "ambiguities": []
+    },
+    "complexity": null,
+    "model_recommendation": null,
+    "model_selection": null,
+    "selected_model": null,
+    "plans": [],
+    "repository_analysis": {
+      "project_type": "Python",
+      "relevant_directories": [
+        "app",
+        "tests"
+      ],
+      "relevant_files": [
+        "app/main.py",
+        "tests/test_main.py"
+      ],
+      "test_command": "pytest",
+      "notes": "Repository analyzed locally (direct Git mode)."
+    },
+    "scope_analysis": {
+      "change_type": "UNCLEAR",
+      "pattern_summary": "Scope could not be classified confidently; planning will inspect the repository conventions.",
+      "already_implemented": false,
+      "already_implemented_reason": null,
+      "related_files": []
+    },
+    "branch_analysis": {
+      "base_branch": "main",
+      "suggested_work_branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-",
+      "existing_branches": [],
+      "branch_collision": false,
+      "collision_message": null
+    },
+    "selected_base_branch": "main",
+    "work_branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-",
+    "generated_files": [],
+    "implementation": null,
+    "test_result": null,
+    "pull_request": null,
+    "terminal_log": [],
+    "mcp_audit": [
+      {
+        "timestamp": "2026-09-15T19:44:00.252609Z",
+        "workflow_id": "ce51faa7-8def-4332-a9e3-7a7064dfa177",
+        "agent": "task_analyzer",
+        "server": "jira",
+        "tool": "fetch_issue",
+        "status": "success",
+        "duration_ms": 820,
+        "request_redacted": {
+          "issue_key": "SCRUM-9"
+        },
+        "response_redacted": {
+          "summary": "Create GET /hello_hi that returns a JSON greeting message."
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T19:44:00.378239Z",
+        "workflow_id": "ce51faa7-8def-4332-a9e3-7a7064dfa177",
+        "agent": "implementation",
+        "server": "git",
+        "tool": "analyze",
+        "status": "success",
+        "duration_ms": 125,
+        "request_redacted": {
+          "repository_path": "C:\\Project\\AI Project\\test-repo\\hello-api"
+        },
+        "response_redacted": {
+          "project_type": "Python"
+        },
+        "guardrail_result": null
+      }
+    ],
+    "audit_log": [
+      {
+        "timestamp": "2026-09-15T19:44:01.049868+00:00",
+        "agent": "scope_analyzer",
+        "action": "fetch_issue",
+        "status": "completed"
+      },
+      {
+        "timestamp": "2026-09-15T19:44:01.611525+00:00",
+        "agent": "orchestrator",
+        "action": "fetch_issue",
+        "status": "failed"
+      }
+    ],
+    "retry_count": 0,
+    "current_stage": "fetch_issue",
+    "report": null
+  },
+  {
+    "id": "6834acba-d999-4ad8-86fc-b8be0c35275c",
+    "jira_key": "SCRUM-9",
+    "state": "FAILED",
+    "created_at": "2026-09-15T19:55:48.086467Z",
+    "updated_at": "2026-09-15T19:55:49.950395Z",
+    "error": "Gemini generation failed: HTTP 404.",
+    "jira_task": {
+      "key": "SCRUM-9",
+      "summary": "Create GET /hello_hi that returns a JSON greeting message.",
+      "description": "Create GET /hello_hi that returns a JSON greeting message.",
+      "issue_type": "Task",
+      "priority": "Medium",
+      "acceptance_criteria": []
+    },
+    "requirement_analysis": {
+      "problem_summary": "Create GET /hello_hi that returns a JSON greeting message.",
+      "functional_requirement": "Create GET /hello_hi that returns a JSON greeting message.",
+      "acceptance_criteria": [
+        "The behavior described by 'Create GET /hello_hi that returns a JSON greeting message.' is available to callers."
+      ],
+      "constraints": [
+        "Preserve existing repository conventions."
+      ],
+      "ambiguities": []
+    },
+    "complexity": null,
+    "model_recommendation": null,
+    "model_selection": null,
+    "selected_model": null,
+    "plans": [],
+    "repository_analysis": {
+      "project_type": "Python",
+      "relevant_directories": [
+        "app",
+        "tests"
+      ],
+      "relevant_files": [
+        "app/main.py",
+        "tests/test_main.py"
+      ],
+      "test_command": "pytest",
+      "notes": "Repository analyzed locally (direct Git mode)."
+    },
+    "scope_analysis": {
+      "change_type": "UNCLEAR",
+      "pattern_summary": "Scope could not be classified confidently; planning will inspect the repository conventions.",
+      "already_implemented": false,
+      "already_implemented_reason": null,
+      "related_files": []
+    },
+    "branch_analysis": {
+      "base_branch": "main",
+      "suggested_work_branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-",
+      "existing_branches": [],
+      "branch_collision": false,
+      "collision_message": null
+    },
+    "selected_base_branch": "main",
+    "work_branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-",
+    "generated_files": [],
+    "implementation": null,
+    "test_result": null,
+    "pull_request": null,
+    "terminal_log": [],
+    "mcp_audit": [
+      {
+        "timestamp": "2026-09-15T19:55:48.705425Z",
+        "workflow_id": "6834acba-d999-4ad8-86fc-b8be0c35275c",
+        "agent": "task_analyzer",
+        "server": "jira",
+        "tool": "fetch_issue",
+        "status": "success",
+        "duration_ms": 612,
+        "request_redacted": {
+          "issue_key": "SCRUM-9"
+        },
+        "response_redacted": {
+          "summary": "Create GET /hello_hi that returns a JSON greeting message."
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T19:55:48.841182Z",
+        "workflow_id": "6834acba-d999-4ad8-86fc-b8be0c35275c",
+        "agent": "implementation",
+        "server": "git",
+        "tool": "analyze",
+        "status": "success",
+        "duration_ms": 135,
+        "request_redacted": {
+          "repository_path": "C:\\Project\\AI Project\\test-repo\\hello-api"
+        },
+        "response_redacted": {
+          "project_type": "Python"
+        },
+        "guardrail_result": null
+      }
+    ],
+    "audit_log": [
+      {
+        "timestamp": "2026-09-15T19:55:49.514504+00:00",
+        "agent": "scope_analyzer",
+        "action": "fetch_issue",
+        "status": "completed"
+      },
+      {
+        "timestamp": "2026-09-15T19:55:49.949927+00:00",
+        "agent": "orchestrator",
+        "action": "fetch_issue",
+        "status": "failed"
+      }
+    ],
+    "retry_count": 0,
+    "current_stage": "fetch_issue",
+    "report": null
+  },
+  {
+    "id": "faad3de7-b013-498b-ae1e-b3e29b79de51",
+    "jira_key": "SCRUM-9",
+    "state": "FAILED",
+    "created_at": "2026-09-15T20:05:13.421816Z",
+    "updated_at": "2026-09-15T20:06:03.260090Z",
+    "error": "Groq generation failed: HTTP 404.",
+    "jira_task": {
+      "key": "SCRUM-9",
+      "summary": "Create GET /hello_hi that returns a JSON greeting message.",
+      "description": "Create GET /hello_hi that returns a JSON greeting message.",
+      "issue_type": "Task",
+      "priority": "Medium",
+      "acceptance_criteria": []
+    },
+    "requirement_analysis": {
+      "problem_summary": "Create GET /hello_hi that returns a JSON greeting message.",
+      "functional_requirement": "Create GET /hello_hi that returns a JSON greeting message.",
+      "acceptance_criteria": [
+        "The behavior described by 'Create GET /hello_hi that returns a JSON greeting message.' is available to callers."
+      ],
+      "constraints": [
+        "Preserve existing repository conventions."
+      ],
+      "ambiguities": []
+    },
+    "complexity": {
+      "score": 2,
+      "level": "LOW",
+      "explanation": "Low complexity based on configured keyword rules and ticket scope.",
+      "estimated_files": 1
+    },
+    "model_recommendation": {
+      "recommended_model_id": "groq:llama-3.1-8b-instant",
+      "alternatives": [
+        {
+          "id": "groq:llama-3.1-8b-instant",
+          "provider": "groq",
+          "model": "llama-3.1-8b-instant",
+          "label": "groq / llama-3.1-8b-instant",
+          "available": true,
+          "recommended": true,
+          "estimated_tokens": 6000
+        },
+        {
+          "id": "groq:llama-3.3-70b-versatile",
+          "provider": "groq",
+          "model": "llama-3.3-70b-versatile",
+          "label": "groq / llama-3.3-70b-versatile",
+          "available": true,
+          "recommended": false,
+          "estimated_tokens": 14000
+        },
+        {
+          "id": "groq:llama-3.3-70b-versatile",
+          "provider": "groq",
+          "model": "llama-3.3-70b-versatile",
+          "label": "groq / llama-3.3-70b-versatile",
+          "available": true,
+          "recommended": false,
+          "estimated_tokens": 32000
+        }
+      ],
+      "reason": "Recommended groq/llama-3.1-8b-instant for complexity score 2 (LOW)."
+    },
+    "model_selection": {
+      "provider": "groq",
+      "model": "llama-3.1-8b-instant",
+      "max_tokens": 6000,
+      "reason": "User selected groq/llama-3.1-8b-instant."
+    },
+    "selected_model": "groq:llama-3.1-8b-instant",
+    "plans": [
+      {
+        "version": 1,
+        "objective": "Create GET /hello_hi that returns a JSON greeting message.",
+        "affected_components": [
+          "Target application API",
+          "Target application tests"
+        ],
+        "likely_files": [
+          "app/main.py",
+          "tests/test_main.py"
+        ],
+        "implementation_steps": [
+          "Inspect the matching application route and test conventions.",
+          "Create the smallest implementation matching the accepted requirement.",
+          "Add focused unit coverage and run the configured validation commands."
+        ],
+        "test_approach": [
+          "Add a positive behavior test.",
+          "Add an invalid-input or error-path test when the endpoint has inputs."
+        ],
+        "risks": [
+          "Confirm endpoint naming and response shape against existing conventions."
+        ],
+        "expected_result": "The ticket behavior is implemented, validated, and ready for review.",
+        "change_request": "Scope could not be classified confidently; planning will inspect the repository conventions."
+      }
+    ],
+    "repository_analysis": {
+      "project_type": "Python",
+      "relevant_directories": [
+        "app",
+        "tests"
+      ],
+      "relevant_files": [
+        "app/main.py",
+        "tests/test_main.py"
+      ],
+      "test_command": "pytest",
+      "notes": "Repository analyzed locally (direct Git mode)."
+    },
+    "scope_analysis": {
+      "change_type": "UNCLEAR",
+      "pattern_summary": "Scope could not be classified confidently; planning will inspect the repository conventions.",
+      "already_implemented": false,
+      "already_implemented_reason": null,
+      "related_files": []
+    },
+    "branch_analysis": {
+      "base_branch": "main",
+      "suggested_work_branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-v1",
+      "existing_branches": [],
+      "branch_collision": false,
+      "collision_message": null
+    },
+    "selected_base_branch": "main",
+    "work_branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-v1",
+    "generated_files": [],
+    "implementation": null,
+    "test_result": null,
+    "pull_request": null,
+    "terminal_log": [],
+    "mcp_audit": [
+      {
+        "timestamp": "2026-09-15T20:05:13.946738Z",
+        "workflow_id": "faad3de7-b013-498b-ae1e-b3e29b79de51",
+        "agent": "task_analyzer",
+        "server": "jira",
+        "tool": "fetch_issue",
+        "status": "success",
+        "duration_ms": 517,
+        "request_redacted": {
+          "issue_key": "SCRUM-9"
+        },
+        "response_redacted": {
+          "summary": "Create GET /hello_hi that returns a JSON greeting message."
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:05:14.077433Z",
+        "workflow_id": "faad3de7-b013-498b-ae1e-b3e29b79de51",
+        "agent": "implementation",
+        "server": "git",
+        "tool": "analyze",
+        "status": "success",
+        "duration_ms": 130,
+        "request_redacted": {
+          "repository_path": "C:\\Project\\AI Project\\test-repo\\hello-api"
+        },
+        "response_redacted": {
+          "project_type": "Python"
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:06:03.061067Z",
+        "workflow_id": "faad3de7-b013-498b-ae1e-b3e29b79de51",
+        "agent": "implementation",
+        "server": "git",
+        "tool": "branch",
+        "status": "success",
+        "duration_ms": 7676,
+        "request_redacted": {
+          "repository_path": "C:\\Project\\AI Project\\test-repo\\hello-api",
+          "jira_key": "SCRUM-9",
+          "summary": "Create GET /hello_hi that returns a JSON greeting message.",
+          "base_branch": "main",
+          "branch_name": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-v1"
+        },
+        "response_redacted": {
+          "branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-v1"
+        },
+        "guardrail_result": null
+      }
+    ],
+    "audit_log": [
+      {
+        "timestamp": "2026-09-15T20:05:14.721377+00:00",
+        "agent": "scope_analyzer",
+        "action": "fetch_issue",
+        "status": "completed"
+      },
+      {
+        "timestamp": "2026-09-15T20:05:14.940328+00:00",
+        "agent": "complexity",
+        "action": "fetch_issue",
+        "status": "completed"
+      },
+      {
+        "timestamp": "2026-09-15T20:05:55.382902+00:00",
+        "agent": "model_selector",
+        "action": "fetch_issue",
+        "status": "user_selected"
+      },
+      {
+        "timestamp": "2026-09-15T20:06:03.259681+00:00",
+        "agent": "orchestrator",
+        "action": "implement",
+        "status": "failed"
+      }
+    ],
+    "retry_count": 0,
+    "current_stage": "implement",
+    "report": null
+  },
+  {
+    "id": "b3a0a574-5155-4fea-887c-672f5e53802f",
+    "jira_key": "SCRUM-9",
+    "state": "FAILED",
+    "created_at": "2026-09-15T20:20:45.084997Z",
+    "updated_at": "2026-09-15T20:21:34.098230Z",
+    "error": "Git command failed: fatal: a branch named 'ai/scrum-9-create-get-hello-hi-that-returns-a-json-v1' already exists",
+    "jira_task": {
+      "key": "SCRUM-9",
+      "summary": "Create GET /hello_hi that returns a JSON greeting message.",
+      "description": "Create GET /hello_hi that returns a JSON greeting message.",
+      "issue_type": "Task",
+      "priority": "Medium",
+      "acceptance_criteria": []
+    },
+    "requirement_analysis": {
+      "problem_summary": "Create GET /hello_hi that returns a JSON greeting message.",
+      "functional_requirement": "Create GET /hello_hi that returns a JSON greeting message.",
+      "acceptance_criteria": [
+        "The behavior described by 'Create GET /hello_hi that returns a JSON greeting message.' is available to callers."
+      ],
+      "constraints": [
+        "Preserve existing repository conventions."
+      ],
+      "ambiguities": []
+    },
+    "complexity": {
+      "score": 2,
+      "level": "LOW",
+      "explanation": "Add a single new route to FastAPI app; no new dependencies or major refactoring. Likely areas: app/main.py.",
+      "estimated_files": 1
+    },
+    "model_recommendation": {
+      "recommended_model_id": "groq:openai/gpt-oss-20b",
+      "alternatives": [
+        {
+          "id": "groq:openai/gpt-oss-20b",
+          "provider": "groq",
+          "model": "openai/gpt-oss-20b",
+          "label": "groq / openai/gpt-oss-20b",
+          "available": true,
+          "recommended": true,
+          "estimated_tokens": 6000
+        },
+        {
+          "id": "groq:openai/gpt-oss-120b",
+          "provider": "groq",
+          "model": "openai/gpt-oss-120b",
+          "label": "groq / openai/gpt-oss-120b",
+          "available": true,
+          "recommended": false,
+          "estimated_tokens": 14000
+        },
+        {
+          "id": "groq:openai/gpt-oss-120b",
+          "provider": "groq",
+          "model": "openai/gpt-oss-120b",
+          "label": "groq / openai/gpt-oss-120b",
+          "available": true,
+          "recommended": false,
+          "estimated_tokens": 32000
+        }
+      ],
+      "reason": "Recommended groq/openai/gpt-oss-20b for complexity score 2 (LOW)."
+    },
+    "model_selection": {
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "max_tokens": 6000,
+      "reason": "User selected groq/openai/gpt-oss-20b."
+    },
+    "selected_model": "groq:openai/gpt-oss-20b",
+    "plans": [
+      {
+        "version": 1,
+        "objective": "Create GET /hello_hi that returns a JSON greeting message.",
+        "affected_components": [
+          "Target application API",
+          "Target application tests"
+        ],
+        "likely_files": [
+          "app/main.py",
+          "tests/test_main.py"
+        ],
+        "implementation_steps": [
+          "Inspect the matching application route and test conventions.",
+          "Create the smallest implementation matching the accepted requirement.",
+          "Add focused unit coverage and run the configured validation commands."
+        ],
+        "test_approach": [
+          "Add a positive behavior test.",
+          "Add an invalid-input or error-path test when the endpoint has inputs."
+        ],
+        "risks": [
+          "Confirm endpoint naming and response shape against existing conventions."
+        ],
+        "expected_result": "The ticket behavior is implemented, validated, and ready for review.",
+        "change_request": "Scope could not be classified confidently; planning will inspect the repository conventions."
+      }
+    ],
+    "repository_analysis": {
+      "project_type": "Python",
+      "relevant_directories": [
+        "app",
+        "tests"
+      ],
+      "relevant_files": [
+        "app/main.py",
+        "tests/test_main.py"
+      ],
+      "test_command": "pytest",
+      "notes": "Repository analyzed locally (direct Git mode)."
+    },
+    "scope_analysis": {
+      "change_type": "UNCLEAR",
+      "pattern_summary": "Scope could not be classified confidently; planning will inspect the repository conventions.",
+      "already_implemented": false,
+      "already_implemented_reason": null,
+      "related_files": []
+    },
+    "branch_analysis": {
+      "base_branch": "main",
+      "suggested_work_branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-v1",
+      "existing_branches": [
+        "ai/scrum-9-create-get-hello-hi-that-returns-a-json-v1"
+      ],
+      "branch_collision": true,
+      "collision_message": "Work branch `ai/scrum-9-create-get-hello-hi-that-returns-a-json-` already exists. A new branch `ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v1` will be created from the selected base branch."
+    },
+    "selected_base_branch": "main",
+    "work_branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-v1",
+    "generated_files": [],
+    "implementation": null,
+    "test_result": null,
+    "pull_request": null,
+    "terminal_log": [],
+    "mcp_audit": [
+      {
+        "timestamp": "2026-09-15T20:20:45.698904Z",
+        "workflow_id": "b3a0a574-5155-4fea-887c-672f5e53802f",
+        "agent": "task_analyzer",
+        "server": "jira",
+        "tool": "fetch_issue",
+        "status": "success",
+        "duration_ms": 605,
+        "request_redacted": {
+          "issue_key": "SCRUM-9"
+        },
+        "response_redacted": {
+          "summary": "Create GET /hello_hi that returns a JSON greeting message."
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:20:45.820179Z",
+        "workflow_id": "b3a0a574-5155-4fea-887c-672f5e53802f",
+        "agent": "implementation",
+        "server": "git",
+        "tool": "analyze",
+        "status": "success",
+        "duration_ms": 121,
+        "request_redacted": {
+          "repository_path": "C:\\Project\\AI Project\\test-repo\\hello-api"
+        },
+        "response_redacted": {
+          "project_type": "Python"
+        },
+        "guardrail_result": null
+      }
+    ],
+    "audit_log": [
+      {
+        "timestamp": "2026-09-15T20:20:46.368848+00:00",
+        "agent": "scope_analyzer",
+        "action": "fetch_issue",
+        "status": "completed"
+      },
+      {
+        "timestamp": "2026-09-15T20:20:47.245532+00:00",
+        "agent": "complexity",
+        "action": "fetch_issue",
+        "status": "completed"
+      },
+      {
+        "timestamp": "2026-09-15T20:21:27.687714+00:00",
+        "agent": "model_selector",
+        "action": "fetch_issue",
+        "status": "user_selected"
+      },
+      {
+        "timestamp": "2026-09-15T20:21:34.097773+00:00",
+        "agent": "orchestrator",
+        "action": "implement",
+        "status": "failed"
+      }
+    ],
+    "retry_count": 0,
+    "current_stage": "implement",
+    "report": null
+  },
+  {
+    "id": "f001c926-cbbd-48b1-9c94-300bf9f5cfae",
+    "jira_key": "SCRUM-9",
+    "state": "COMPLETED",
+    "created_at": "2026-09-15T20:23:12.807689Z",
+    "updated_at": "2026-09-15T20:23:39.739958Z",
+    "error": null,
+    "jira_task": {
+      "key": "SCRUM-9",
+      "summary": "Create GET /hello_hi that returns a JSON greeting message.",
+      "description": "Create GET /hello_hi that returns a JSON greeting message.",
+      "issue_type": "Task",
+      "priority": "Medium",
+      "acceptance_criteria": []
+    },
+    "requirement_analysis": {
+      "problem_summary": "Create GET /hello_hi that returns a JSON greeting message.",
+      "functional_requirement": "Create GET /hello_hi that returns a JSON greeting message.",
+      "acceptance_criteria": [
+        "The behavior described by 'Create GET /hello_hi that returns a JSON greeting message.' is available to callers."
+      ],
+      "constraints": [
+        "Preserve existing repository conventions."
+      ],
+      "ambiguities": []
+    },
+    "complexity": {
+      "score": 2,
+      "level": "LOW",
+      "explanation": "Only a single new endpoint in app/main.py with trivial JSON response; minimal logic and no cross-cutting changes. Likely areas: app/main.py.",
+      "estimated_files": 1
+    },
+    "model_recommendation": {
+      "recommended_model_id": "groq:openai/gpt-oss-20b",
+      "alternatives": [
+        {
+          "id": "groq:openai/gpt-oss-20b",
+          "provider": "groq",
+          "model": "openai/gpt-oss-20b",
+          "label": "groq / openai/gpt-oss-20b",
+          "available": true,
+          "recommended": true,
+          "estimated_tokens": 6000
+        },
+        {
+          "id": "groq:openai/gpt-oss-120b",
+          "provider": "groq",
+          "model": "openai/gpt-oss-120b",
+          "label": "groq / openai/gpt-oss-120b",
+          "available": true,
+          "recommended": false,
+          "estimated_tokens": 14000
+        },
+        {
+          "id": "groq:openai/gpt-oss-120b",
+          "provider": "groq",
+          "model": "openai/gpt-oss-120b",
+          "label": "groq / openai/gpt-oss-120b",
+          "available": true,
+          "recommended": false,
+          "estimated_tokens": 32000
+        }
+      ],
+      "reason": "Recommended groq/openai/gpt-oss-20b for complexity score 2 (LOW)."
+    },
+    "model_selection": {
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "max_tokens": 6000,
+      "reason": "User selected groq/openai/gpt-oss-20b."
+    },
+    "selected_model": "groq:openai/gpt-oss-20b",
+    "plans": [
+      {
+        "version": 1,
+        "objective": "Create GET /hello_hi that returns a JSON greeting message.",
+        "affected_components": [
+          "Target application API",
+          "Target application tests"
+        ],
+        "likely_files": [
+          "app/main.py",
+          "tests/test_main.py"
+        ],
+        "implementation_steps": [
+          "Inspect the matching application route and test conventions.",
+          "Create the smallest implementation matching the accepted requirement.",
+          "Add focused unit coverage and run the configured validation commands."
+        ],
+        "test_approach": [
+          "Add a positive behavior test.",
+          "Add an invalid-input or error-path test when the endpoint has inputs."
+        ],
+        "risks": [
+          "Confirm endpoint naming and response shape against existing conventions."
+        ],
+        "expected_result": "The ticket behavior is implemented, validated, and ready for review.",
+        "change_request": "Scope could not be classified confidently; planning will inspect the repository conventions."
+      }
+    ],
+    "repository_analysis": {
+      "project_type": "Python",
+      "relevant_directories": [
+        "app",
+        "tests"
+      ],
+      "relevant_files": [
+        "app/main.py",
+        "tests/test_main.py"
+      ],
+      "test_command": "pytest",
+      "notes": "Repository analyzed locally (direct Git mode)."
+    },
+    "scope_analysis": {
+      "change_type": "UNCLEAR",
+      "pattern_summary": "Scope could not be classified confidently; planning will inspect the repository conventions.",
+      "already_implemented": false,
+      "already_implemented_reason": null,
+      "related_files": []
+    },
+    "branch_analysis": {
+      "base_branch": "main",
+      "suggested_work_branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v1",
+      "existing_branches": [
+        "ai/scrum-9-create-get-hello-hi-that-returns-a-json-v1"
+      ],
+      "branch_collision": true,
+      "collision_message": "Work branch `ai/scrum-9-create-get-hello-hi-that-returns-a-json-` already exists. A new branch `ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v1` will be created from the selected base branch."
+    },
+    "selected_base_branch": "main",
+    "work_branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v1",
+    "generated_files": [
+      {
+        "path": "app/main.py",
+        "content": "from fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/hello_hi\")\ndef hello_hi():\n    return {\"message\": \"Hello, Hi!\"}\n"
+      },
+      {
+        "path": "tests/test_main.py",
+        "content": "from fastapi.testclient import TestClient\nfrom app.main import app\n\nclient = TestClient(app)\n\ndef test_hello_hi():\n    response = client.get(\"/hello_hi\")\n    assert response.status_code == 200\n    assert response.json() == {\"message\": \"Hello, Hi!\"}\n"
+      }
+    ],
+    "implementation": {
+      "branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v1",
+      "changed_files": [
+        "app/main.py",
+        "tests/test_main.py"
+      ],
+      "diff_summary": "Implemented GET /hello_hi endpoint with JSON response and added corresponding unit test",
+      "validation_status": "PASS",
+      "validation_summary": "Command exited with code 0.\n\n.                                                                        [100%]\n============================== warnings summary ===============================\n..\\..\\..\\..\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n..\\..\\..\\..\\Program Files\\Python314\\Lib\\site-packages\\starlette\\testclient.py:53\n  C:\\Program Files\\Python314\\Lib\\site-packages\\starlette\\testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.\n    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]\n\ntests/test_main.py::test_hello_hi\n  C:\\Program Files\\Python314\\Lib\\site-packages\\pytest_asyncio\\plugin.py:1216: DeprecationWarning: 'asyncio.get_event_loop_policy' is deprecated and slated for removal in Python 3.16\n    return asyncio.get_event_loop_policy()\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1 passed, 3 warnings in 0.51s",
+      "commit": null
+    },
+    "test_result": {
+      "generated_tests": [
+        "tests/test_main.py"
+      ],
+      "executed_command": "python -m compileall -q .; python -m pytest -q",
+      "passed": 2,
+      "failed": 0,
+      "status": "PASS",
+      "summary": "[syntax] PASS: Command exited with code 0.\n[tests] PASS: .                                                                        [100%]\n============================== warnings summary ===============================\n..\\..\\..\\..\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n..\\..\\."
+    },
+    "pull_request": {
+      "number": 1,
+      "title": "Create GET /hello_hi that returns a JSON greeting message.",
+      "url": "https://github.com/ramuknahoM/hello-api/pull/1",
+      "status": "OPEN"
+    },
+    "terminal_log": [
+      {
+        "command_id": "syntax",
+        "command": "python -m compileall -q .",
+        "status": "PASS",
+        "output": "Command exited with code 0.",
+        "duration_ms": 418
+      },
+      {
+        "command_id": "tests",
+        "command": "python -m pytest -q",
+        "status": "PASS",
+        "output": ".                                                                        [100%]\n============================== warnings summary ===============================\n..\\..\\..\\..\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n..\\..\\..\\..\\Program Files\\Python314\\Lib\\site-packages\\starlette\\testclient.py:53\n  C:\\Program Files\\Python314\\Lib\\site-packages\\starlette\\testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.\n    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]\n\ntests/test_main.py::test_hello_hi\n  C:\\Program Files\\Python314\\Lib\\site-packages\\pytest_asyncio\\plugin.py:1216: DeprecationWarning: 'asyncio.get_event_loop_policy' is deprecated and slated for removal in Python 3.16\n    return asyncio.get_event_loop_policy()\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1 passed, 3 warnings in 0.51s",
+        "duration_ms": 1767
+      }
+    ],
+    "mcp_audit": [
+      {
+        "timestamp": "2026-09-15T20:23:13.420792Z",
+        "workflow_id": "f001c926-cbbd-48b1-9c94-300bf9f5cfae",
+        "agent": "task_analyzer",
+        "server": "jira",
+        "tool": "fetch_issue",
+        "status": "success",
+        "duration_ms": 604,
+        "request_redacted": {
+          "issue_key": "SCRUM-9"
+        },
+        "response_redacted": {
+          "summary": "Create GET /hello_hi that returns a JSON greeting message."
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:23:13.538502Z",
+        "workflow_id": "f001c926-cbbd-48b1-9c94-300bf9f5cfae",
+        "agent": "implementation",
+        "server": "git",
+        "tool": "analyze",
+        "status": "success",
+        "duration_ms": 117,
+        "request_redacted": {
+          "repository_path": "C:\\Project\\AI Project\\test-repo\\hello-api"
+        },
+        "response_redacted": {
+          "project_type": "Python"
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:23:23.762840Z",
+        "workflow_id": "f001c926-cbbd-48b1-9c94-300bf9f5cfae",
+        "agent": "implementation",
+        "server": "git",
+        "tool": "branch",
+        "status": "success",
+        "duration_ms": 6343,
+        "request_redacted": {
+          "repository_path": "C:\\Project\\AI Project\\test-repo\\hello-api",
+          "jira_key": "SCRUM-9",
+          "summary": "Create GET /hello_hi that returns a JSON greeting message.",
+          "base_branch": "main",
+          "branch_name": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v1"
+        },
+        "response_redacted": {
+          "branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v1"
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:23:27.132845Z",
+        "workflow_id": "f001c926-cbbd-48b1-9c94-300bf9f5cfae",
+        "agent": "implementation",
+        "server": "git",
+        "tool": "write",
+        "status": "success",
+        "duration_ms": 1706,
+        "request_redacted": {
+          "files": 2
+        },
+        "response_redacted": {
+          "changed_files": [
+            "app/main.py",
+            "tests/test_main.py"
+          ]
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:23:37.033139Z",
+        "workflow_id": "f001c926-cbbd-48b1-9c94-300bf9f5cfae",
+        "agent": "publisher",
+        "server": "git",
+        "tool": "push",
+        "status": "success",
+        "duration_ms": 7712,
+        "request_redacted": {
+          "branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v1"
+        },
+        "response_redacted": {},
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:23:38.967052Z",
+        "workflow_id": "f001c926-cbbd-48b1-9c94-300bf9f5cfae",
+        "agent": "publisher",
+        "server": "git",
+        "tool": "pr",
+        "status": "success",
+        "duration_ms": 1933,
+        "request_redacted": {
+          "repository_path": "C:\\Project\\AI Project\\test-repo\\hello-api",
+          "title": "Create GET /hello_hi that returns a JSON greeting message.",
+          "body": "## SCRUM-9\n\nCreate GET /hello_hi that returns a JSON greeting message.\n\n### Validation\n[syntax] PASS: Command exited with code 0.\n[tests] PASS: .                                                                        [100%]\n============================== warnings summary ===============================\n..\\..\\..\\..\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n..\\..\\.",
+          "base_branch": "main",
+          "head_branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v1"
+        },
+        "response_redacted": {
+          "url": "https://github.com/ramuknahoM/hello-api/pull/1"
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:23:39.739517Z",
+        "workflow_id": "f001c926-cbbd-48b1-9c94-300bf9f5cfae",
+        "agent": "publisher",
+        "server": "jira",
+        "tool": "comment",
+        "status": "success",
+        "duration_ms": 772,
+        "request_redacted": {
+          "issue_key": "SCRUM-9"
+        },
+        "response_redacted": {},
+        "guardrail_result": null
+      }
+    ],
+    "audit_log": [
+      {
+        "timestamp": "2026-09-15T20:23:14.022406+00:00",
+        "agent": "scope_analyzer",
+        "action": "fetch_issue",
+        "status": "completed"
+      },
+      {
+        "timestamp": "2026-09-15T20:23:14.756969+00:00",
+        "agent": "complexity",
+        "action": "fetch_issue",
+        "status": "completed"
+      },
+      {
+        "timestamp": "2026-09-15T20:23:17.417747+00:00",
+        "agent": "model_selector",
+        "action": "fetch_issue",
+        "status": "user_selected"
+      },
+      {
+        "timestamp": "2026-09-15T20:23:39.739639+00:00",
+        "agent": "publisher",
+        "action": "publish",
+        "status": "completed"
+      }
+    ],
+    "retry_count": 0,
+    "current_stage": "publish",
+    "report": {
+      "jira_key": "SCRUM-9",
+      "summary": "Create GET /hello_hi that returns a JSON greeting message.",
+      "complexity_level": "LOW",
+      "complexity_score": 2,
+      "selected_model": "groq:openai/gpt-oss-20b",
+      "validation_status": "PASS",
+      "pr_url": "https://github.com/ramuknahoM/hello-api/pull/1",
+      "final_status": "PUBLISHING",
+      "retry_count": 0
+    }
+  },
+  {
+    "id": "fce2e38b-5356-462b-9c29-45be2894c959",
+    "jira_key": "SCRUM-9",
+    "state": "COMPLETED",
+    "created_at": "2026-09-15T20:27:36.754841Z",
+    "updated_at": "2026-09-15T20:28:12.554704Z",
+    "error": null,
+    "jira_task": {
+      "key": "SCRUM-9",
+      "summary": "Create GET /hello_hi that returns a JSON greeting message.",
+      "description": "Create GET /hello_hi that returns a JSON greeting message.",
+      "issue_type": "Task",
+      "priority": "Medium",
+      "acceptance_criteria": []
+    },
+    "requirement_analysis": {
+      "problem_summary": "Create GET /hello_hi that returns a JSON greeting message.",
+      "functional_requirement": "Create GET /hello_hi that returns a JSON greeting message.",
+      "acceptance_criteria": [
+        "The behavior described by 'Create GET /hello_hi that returns a JSON greeting message.' is available to callers."
+      ],
+      "constraints": [
+        "Preserve existing repository conventions."
+      ],
+      "ambiguities": []
+    },
+    "complexity": {
+      "score": 2,
+      "level": "LOW",
+      "explanation": "Adding a simple GET endpoint that returns a static JSON greeting only requires a small change to the existing FastAPI app. No new modules, dependencies, or cross\u2011cutting logic are needed; the modification is localized to a single file. Likely areas: app/main.py, tests/test_main.py.",
+      "estimated_files": 1
+    },
+    "model_recommendation": {
+      "recommended_model_id": "groq:openai/gpt-oss-20b",
+      "alternatives": [
+        {
+          "id": "groq:openai/gpt-oss-20b",
+          "provider": "groq",
+          "model": "openai/gpt-oss-20b",
+          "label": "groq / openai/gpt-oss-20b",
+          "available": true,
+          "recommended": true,
+          "estimated_tokens": 6000
+        },
+        {
+          "id": "groq:openai/gpt-oss-120b",
+          "provider": "groq",
+          "model": "openai/gpt-oss-120b",
+          "label": "groq / openai/gpt-oss-120b",
+          "available": true,
+          "recommended": false,
+          "estimated_tokens": 14000
+        },
+        {
+          "id": "groq:openai/gpt-oss-120b",
+          "provider": "groq",
+          "model": "openai/gpt-oss-120b",
+          "label": "groq / openai/gpt-oss-120b",
+          "available": true,
+          "recommended": false,
+          "estimated_tokens": 32000
+        }
+      ],
+      "reason": "Recommended groq/openai/gpt-oss-20b for complexity score 2 (LOW)."
+    },
+    "model_selection": {
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "max_tokens": 6000,
+      "reason": "User selected groq/openai/gpt-oss-20b."
+    },
+    "selected_model": "groq:openai/gpt-oss-20b",
+    "plans": [
+      {
+        "version": 1,
+        "objective": "Create GET /hello_hi that returns a JSON greeting message.",
+        "affected_components": [
+          "Target application API",
+          "Target application tests"
+        ],
+        "likely_files": [
+          "app/main.py",
+          "tests/test_main.py"
+        ],
+        "implementation_steps": [
+          "Inspect the matching application route and test conventions.",
+          "Create the smallest implementation matching the accepted requirement.",
+          "Add focused unit coverage and run the configured validation commands."
+        ],
+        "test_approach": [
+          "Add a positive behavior test.",
+          "Add an invalid-input or error-path test when the endpoint has inputs."
+        ],
+        "risks": [
+          "Confirm endpoint naming and response shape against existing conventions."
+        ],
+        "expected_result": "The ticket behavior is implemented, validated, and ready for review.",
+        "change_request": "Scope could not be classified confidently; planning will inspect the repository conventions."
+      }
+    ],
+    "repository_analysis": {
+      "project_type": "Python",
+      "relevant_directories": [
+        "app",
+        "tests"
+      ],
+      "relevant_files": [
+        "app/main.py",
+        "tests/test_main.py"
+      ],
+      "test_command": "pytest",
+      "notes": "Repository analyzed locally (direct Git mode)."
+    },
+    "scope_analysis": {
+      "change_type": "UNCLEAR",
+      "pattern_summary": "Scope could not be classified confidently; planning will inspect the repository conventions.",
+      "already_implemented": false,
+      "already_implemented_reason": null,
+      "related_files": []
+    },
+    "branch_analysis": {
+      "base_branch": "main",
+      "suggested_work_branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v2",
+      "existing_branches": [
+        "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v1",
+        "ai/scrum-9-create-get-hello-hi-that-returns-a-json-v1"
+      ],
+      "branch_collision": true,
+      "collision_message": "Work branch `ai/scrum-9-create-get-hello-hi-that-returns-a-json-` already exists. A new branch `ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v2` will be created from the selected base branch."
+    },
+    "selected_base_branch": "main",
+    "work_branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v2",
+    "generated_files": [
+      {
+        "path": "app/main.py",
+        "content": "from fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get('/')\ndef read_root():\n    return {'Hello': 'World'}\n\n@app.get('/hello_hi')\ndef hello_hi():\n    return {'message': 'Hello, Hi!'}\n"
+      },
+      {
+        "path": "tests/test_hello_hi.py",
+        "content": "from fastapi.testclient import TestClient\nfrom app.main import app\n\nclient = TestClient(app)\n\ndef test_hello_hi():\n    response = client.get('/hello_hi')\n    assert response.status_code == 200\n    assert response.json() == {'message': 'Hello, Hi!'}"
+      }
+    ],
+    "implementation": {
+      "branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v2",
+      "changed_files": [
+        "app/main.py",
+        "tests/test_hello_hi.py"
+      ],
+      "diff_summary": "Implemented GET /hello_hi endpoint returning JSON greeting and added corresponding unit test.",
+      "validation_status": "PASS",
+      "validation_summary": "Command exited with code 0.\n\n..                                                                       [100%]\n============================== warnings summary ===============================\n..\\..\\..\\..\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n..\\..\\..\\..\\Program Files\\Python314\\Lib\\site-packages\\starlette\\testclient.py:53\n  C:\\Program Files\\Python314\\Lib\\site-packages\\starlette\\testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.\n    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]\n\ntests/test_hello_hi.py::test_hello_hi\n  C:\\Program Files\\Python314\\Lib\\site-packages\\pytest_asyncio\\plugin.py:1216: DeprecationWarning: 'asyncio.get_event_loop_policy' is deprecated and slated for removal in Python 3.16\n    return asyncio.get_event_loop_policy()\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n2 passed, 3 warnings in 0.53s",
+      "commit": null
+    },
+    "test_result": {
+      "generated_tests": [
+        "tests/test_hello_hi.py"
+      ],
+      "executed_command": "python -m compileall -q .; python -m pytest -q",
+      "passed": 2,
+      "failed": 0,
+      "status": "PASS",
+      "summary": "[syntax] PASS: Command exited with code 0.\n[tests] PASS: ..                                                                       [100%]\n============================== warnings summary ===============================\n..\\..\\..\\..\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n..\\..\\."
+    },
+    "pull_request": {
+      "number": 2,
+      "title": "Create GET /hello_hi that returns a JSON greeting message.",
+      "url": "https://github.com/ramuknahoM/hello-api/pull/2",
+      "status": "OPEN"
+    },
+    "terminal_log": [
+      {
+        "command_id": "syntax",
+        "command": "python -m compileall -q .",
+        "status": "PASS",
+        "output": "Command exited with code 0.",
+        "duration_ms": 442
+      },
+      {
+        "command_id": "tests",
+        "command": "python -m pytest -q",
+        "status": "PASS",
+        "output": "..                                                                       [100%]\n============================== warnings summary ===============================\n..\\..\\..\\..\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n..\\..\\..\\..\\Program Files\\Python314\\Lib\\site-packages\\starlette\\testclient.py:53\n  C:\\Program Files\\Python314\\Lib\\site-packages\\starlette\\testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.\n    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]\n\ntests/test_hello_hi.py::test_hello_hi\n  C:\\Program Files\\Python314\\Lib\\site-packages\\pytest_asyncio\\plugin.py:1216: DeprecationWarning: 'asyncio.get_event_loop_policy' is deprecated and slated for removal in Python 3.16\n    return asyncio.get_event_loop_policy()\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n2 passed, 3 warnings in 0.53s",
+        "duration_ms": 1807
+      }
+    ],
+    "mcp_audit": [
+      {
+        "timestamp": "2026-09-15T20:27:37.318066Z",
+        "workflow_id": "fce2e38b-5356-462b-9c29-45be2894c959",
+        "agent": "task_analyzer",
+        "server": "jira",
+        "tool": "fetch_issue",
+        "status": "success",
+        "duration_ms": 554,
+        "request_redacted": {
+          "issue_key": "SCRUM-9"
+        },
+        "response_redacted": {
+          "summary": "Create GET /hello_hi that returns a JSON greeting message."
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:27:37.488770Z",
+        "workflow_id": "fce2e38b-5356-462b-9c29-45be2894c959",
+        "agent": "implementation",
+        "server": "git",
+        "tool": "analyze",
+        "status": "success",
+        "duration_ms": 170,
+        "request_redacted": {
+          "repository_path": "C:\\Project\\AI Project\\test-repo\\hello-api"
+        },
+        "response_redacted": {
+          "project_type": "Python"
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:27:54.861232Z",
+        "workflow_id": "fce2e38b-5356-462b-9c29-45be2894c959",
+        "agent": "implementation",
+        "server": "git",
+        "tool": "branch",
+        "status": "success",
+        "duration_ms": 8270,
+        "request_redacted": {
+          "repository_path": "C:\\Project\\AI Project\\test-repo\\hello-api",
+          "jira_key": "SCRUM-9",
+          "summary": "Create GET /hello_hi that returns a JSON greeting message.",
+          "base_branch": "main",
+          "branch_name": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v2"
+        },
+        "response_redacted": {
+          "branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v2"
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:27:58.632598Z",
+        "workflow_id": "fce2e38b-5356-462b-9c29-45be2894c959",
+        "agent": "implementation",
+        "server": "git",
+        "tool": "write",
+        "status": "success",
+        "duration_ms": 1927,
+        "request_redacted": {
+          "files": 2
+        },
+        "response_redacted": {
+          "changed_files": [
+            "app/main.py",
+            "tests/test_hello_hi.py"
+          ]
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:28:09.225661Z",
+        "workflow_id": "fce2e38b-5356-462b-9c29-45be2894c959",
+        "agent": "publisher",
+        "server": "git",
+        "tool": "push",
+        "status": "success",
+        "duration_ms": 8341,
+        "request_redacted": {
+          "branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v2"
+        },
+        "response_redacted": {},
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:28:11.637081Z",
+        "workflow_id": "fce2e38b-5356-462b-9c29-45be2894c959",
+        "agent": "publisher",
+        "server": "git",
+        "tool": "pr",
+        "status": "success",
+        "duration_ms": 2411,
+        "request_redacted": {
+          "repository_path": "C:\\Project\\AI Project\\test-repo\\hello-api",
+          "title": "Create GET /hello_hi that returns a JSON greeting message.",
+          "body": "## SCRUM-9\n\nCreate GET /hello_hi that returns a JSON greeting message.\n\n### Validation\n[syntax] PASS: Command exited with code 0.\n[tests] PASS: ..                                                                       [100%]\n============================== warnings summary ===============================\n..\\..\\..\\..\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Program Files\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n..\\..\\.",
+          "base_branch": "main",
+          "head_branch": "ai/scrum-9-create-get-hello-hi-that-returns-a-json-_v2"
+        },
+        "response_redacted": {
+          "url": "https://github.com/ramuknahoM/hello-api/pull/2"
+        },
+        "guardrail_result": null
+      },
+      {
+        "timestamp": "2026-09-15T20:28:12.554326Z",
+        "workflow_id": "fce2e38b-5356-462b-9c29-45be2894c959",
+        "agent": "publisher",
+        "server": "jira",
+        "tool": "comment",
+        "status": "success",
+        "duration_ms": 917,
+        "request_redacted": {
+          "issue_key": "SCRUM-9"
+        },
+        "response_redacted": {},
+        "guardrail_result": null
+      }
+    ],
+    "audit_log": [
+      {
+        "timestamp": "2026-09-15T20:27:38.049359+00:00",
+        "agent": "scope_analyzer",
+        "action": "fetch_issue",
+        "status": "completed"
+      },
+      {
+        "timestamp": "2026-09-15T20:27:39.132757+00:00",
+        "agent": "complexity",
+        "action": "fetch_issue",
+        "status": "completed"
+      },
+      {
+        "timestamp": "2026-09-15T20:27:46.589392+00:00",
+        "agent": "model_selector",
+        "action": "fetch_issue",
+        "status": "user_selected"
+      },
+      {
+        "timestamp": "2026-09-15T20:28:12.554406+00:00",
+        "agent": "publisher",
+        "action": "publish",
+        "status": "completed"
+      }
+    ],
+    "retry_count": 0,
+    "current_stage": "publish",
+    "report": {
+      "jira_key": "SCRUM-9",
+      "summary": "Create GET /hello_hi that returns a JSON greeting message.",
+      "complexity_level": "LOW",
+      "complexity_score": 2,
+      "selected_model": "groq:openai/gpt-oss-20b",
+      "validation_status": "PASS",
+      "pr_url": "https://github.com/ramuknahoM/hello-api/pull/2",
+      "final_status": "PUBLISHING",
+      "retry_count": 0
+    }
+  }
+]

@@ -14,18 +14,18 @@ workflow:
 model_routing:
   - complexity_min: 1
     complexity_max: 3
-    provider: gemini
-    model: ${GEMINI_MODEL_LOW}
+    provider: groq
+    model: ${GROQ_MODEL_LOW}
     max_tokens: 6000
   - complexity_min: 4
     complexity_max: 6
-    provider: gemini
-    model: ${GEMINI_MODEL_MEDIUM}
+    provider: groq
+    model: ${GROQ_MODEL_MEDIUM}
     max_tokens: 14000
   - complexity_min: 7
     complexity_max: 10
-    provider: gemini
-    model: ${GEMINI_MODEL_HIGH}
+    provider: groq
+    model: ${GROQ_MODEL_HIGH}
     max_tokens: 32000
 
 retry_escalation: next_tier
