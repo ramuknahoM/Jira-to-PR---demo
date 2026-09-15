@@ -1,0 +1,10 @@
+Create a structured implementation plan for this Jira ticket.
+
+Ticket key: {key}
+Summary: {summary}
+Description: {description}
+Acceptance criteria: {acceptance_criteria}
+Repository type: {project_type}
+Relevant files: {relevant_files}
+
+Return a concise plan with objective, affected components, likely files, implementation steps, test approach, risks, and expected result.

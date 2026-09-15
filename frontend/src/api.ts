@@ -1,25 +1,51 @@
-import type { Workflow } from "./types";
+import type { BranchListResponse, HealthStatus, PublicConfig, SetupRequest, SetupResponse, Workflow } from "./types";
 
 const API = import.meta.env.VITE_API_URL ?? "http://localhost:8000";
 
+let sessionId: string | undefined;
+
+export function setSessionId(id: string | undefined) {
+  sessionId = id;
+}
+
+export function getSessionId() {
+  return sessionId;
+}
+
+function headers(): HeadersInit {
+  const base: Record<string, string> = { "Content-Type": "application/json" };
+  if (sessionId) base["X-Session-Id"] = sessionId;
+  return base;
+}
+
 async function request<T>(path: string, method = "GET", body?: object): Promise<T> {
-  const response = await fetch(`${API}${path}`, { method, headers: { "Content-Type": "application/json" }, body: body ? JSON.stringify(body) : undefined });
+  const response = await fetch(`${API}${path}`, {
+    method,
+    headers: headers(),
+    body: body ? JSON.stringify(body) : undefined,
+  });
   if (!response.ok) {
     const error = await response.json().catch(() => ({}));
-    throw new Error(error.detail ?? "The request could not be completed.");
+    throw new Error(typeof error.detail === "string" ? error.detail : "The request could not be completed.");
   }
   return response.json() as Promise<T>;
 }
 
 export const api = {
-  create: (jiraKey: string) => request<Workflow>("/api/workflows", "POST", { jira_key: jiraKey }),
-  analyze: (id: string) => request<Workflow>(`/api/workflows/${id}/analyze`, "POST"),
-  selectModel: (id: string, modelId: string) => request<Workflow>(`/api/workflows/${id}/model-selection`, "POST", { model_id: modelId }),
-  plan: (id: string, comment?: string) => request<Workflow>(`/api/workflows/${id}/plan`, "POST", { comment }),
-  approvePlan: (id: string) => request<Workflow>(`/api/workflows/${id}/approve-plan`, "POST"),
-  requestPlanChanges: (id: string, comment: string) => request<Workflow>(`/api/workflows/${id}/plan-changes`, "POST", { comment }),
-  implement: (id: string) => request<Workflow>(`/api/workflows/${id}/implementation`, "POST"),
-  verify: (id: string, approved: boolean, comment?: string) => request<Workflow>(`/api/workflows/${id}/verification`, "POST", { approved, comment }),
-  tests: (id: string) => request<Workflow>(`/api/workflows/${id}/tests`, "POST"),
-  createPr: (id: string) => request<Workflow>(`/api/workflows/${id}/pr`, "POST"),
+  health: () => request<HealthStatus>("/health"),
+  publicConfig: () => request<PublicConfig>("/api/config/public"),
+  validateSetup: (payload: SetupRequest) => request<SetupResponse>("/api/setup/validate", "POST", payload),
+  branches: () => request<BranchListResponse>("/api/repository/branches"),
+  create: (jiraKey: string, baseBranch?: string) =>
+    request<Workflow>("/api/workflows", "POST", { jira_key: jiraKey, base_branch: baseBranch }),
+  run: (id: string) => request<Workflow>(`/api/workflows/${id}/run`, "POST"),
+  selectModel: (id: string, routeId: string, workBranch?: string) =>
+    request<Workflow>(`/api/workflows/${id}/model-selection`, "POST", { route_id: routeId, work_branch: workBranch }),
+  get: (id: string) => request<Workflow>(`/api/workflows/${id}`),
+  approve: (id: string) => request<Workflow>(`/api/workflows/${id}/approve`, "POST", { approved: true }),
+  file: async (id: string, path: string) => {
+    const response = await fetch(`${API}/api/workflows/${id}/files/${encodeURIComponent(path)}`, { headers: headers() });
+    if (!response.ok) throw new Error("Could not load file content.");
+    return response.text();
+  },
 };

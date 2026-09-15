@@ -17,11 +17,9 @@ class LLMProvider(ABC):
 
 
 class GeminiProvider(LLMProvider):
-    """Minimal Gemini REST provider; callers remain independent of Gemini's API shape."""
-
-    def __init__(self, settings: Settings) -> None:
+    def __init__(self, settings: Settings, model: str | None = None) -> None:
         self.api_key = settings.gemini_api_key
-        self.model = settings.gemini_model
+        self.model = model or settings.gemini_model
 
     async def generate(self, prompt: str) -> str:
         if not self.api_key:
@@ -37,26 +35,9 @@ class GeminiProvider(LLMProvider):
                 raise ValueError("Gemini returned no text content")
             return text
         except httpx.HTTPStatusError as exc:
-            if exc.response.status_code == 404:
-                models = await self.available_models()
-                if models:
-                    raise HTTPException(status_code=502, detail=f"Gemini model '{self.model}' is unavailable to this API key. Set GEMINI_MODEL to one of: {', '.join(models[:12])}") from exc
             raise HTTPException(status_code=502, detail=f"Gemini generation failed: HTTP {exc.response.status_code}.") from exc
         except (httpx.HTTPError, KeyError, IndexError, TypeError, ValueError) as exc:
             raise HTTPException(status_code=502, detail=f"Gemini generation failed: {exc}") from exc
-
-    async def available_models(self) -> list[str]:
-        if not self.api_key:
-            return []
-        try:
-            async with httpx.AsyncClient(timeout=15.0) as client:
-                response = await client.get("https://generativelanguage.googleapis.com/v1beta/models", headers={"x-goog-api-key": self.api_key})
-            response.raise_for_status()
-            models = response.json().get("models", [])
-            supported = [model["name"].removeprefix("models/") for model in models if "generateContent" in model.get("supportedGenerationMethods", [])]
-            return supported or [model["name"].removeprefix("models/") for model in models if isinstance(model.get("name"), str)]
-        except (httpx.HTTPError, KeyError, TypeError):
-            return []
 
     async def health_check(self) -> bool:
         if not self.api_key:
@@ -73,7 +54,7 @@ class UnconfiguredProvider(LLMProvider):
         self.name = name
 
     async def generate(self, prompt: str) -> str:
-        raise HTTPException(status_code=503, detail=f"{self.name} provider is connector-ready but not configured in this MVP.")
+        raise HTTPException(status_code=503, detail=f"{self.name} provider is connector-ready but not configured.")
 
     async def health_check(self) -> bool:
         return False
@@ -81,21 +62,16 @@ class UnconfiguredProvider(LLMProvider):
 
 class ModelGateway:
     def __init__(self, settings: Settings) -> None:
-        self.providers: dict[str, LLMProvider] = {
-            "gemini": GeminiProvider(settings),
-            "openai": UnconfiguredProvider("OpenAI"),
-            "anthropic": UnconfiguredProvider("Anthropic"),
-            "ollama": UnconfiguredProvider("Ollama"),
-        }
+        self.settings = settings
 
-    def provider(self, name: str) -> LLMProvider:
-        provider = self.providers.get(name)
-        if not provider:
-            raise HTTPException(status_code=400, detail=f"Unknown model provider: {name}")
-        return provider
+    def provider(self, provider_name: str, model: str | None = None) -> LLMProvider:
+        if provider_name == "gemini":
+            return GeminiProvider(self.settings, model)
+        if provider_name in {"openai", "anthropic", "ollama"}:
+            return UnconfiguredProvider(provider_name.title())
+        raise HTTPException(status_code=400, detail=f"Unknown model provider: {provider_name}")
 
     async def available_models(self, name: str) -> list[str]:
-        provider = self.provider(name)
-        if isinstance(provider, GeminiProvider):
-            return await provider.available_models()
+        if name == "gemini" and self.settings.gemini_api_key:
+            return [self.settings.gemini_model_low or self.settings.gemini_model, self.settings.gemini_model_high or self.settings.gemini_model]
         return []

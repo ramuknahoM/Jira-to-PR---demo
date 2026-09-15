@@ -1,7 +1,7 @@
 {
-  "name": "aidlc-demo-ui",
+  "name": "aidlc-studio-ui",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,14 +9,15 @@
     "lint": "tsc -b --pretty false"
   },
   "dependencies": {
-    "vite": "latest",
+    "@monaco-editor/react": "^4.7.0",
     "react": "latest",
     "react-dom": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "vite": "latest"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "latest",
     "@types/react": "latest",
-    "@types/react-dom": "latest"
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest"
   }
 }

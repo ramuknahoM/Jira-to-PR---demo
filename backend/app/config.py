@@ -9,16 +9,27 @@ class Settings(BaseSettings):
 
     gemini_api_key: str | None = None
     gemini_model: str = "gemini-2.5-flash"
-    jira_base_url: str | None = None
-    jira_username: str | None = None
-    jira_api_token: str | None = None
+    gemini_model_low: str | None = None
+    gemini_model_medium: str | None = None
+    gemini_model_high: str | None = None
+    jira_mcp_url: str | None = None
+    jira_mcp_token: str | None = None
+    git_mcp_url: str | None = None
+    git_mcp_token: str | None = None
+    jira_done_transition_id: str | None = None
+    workflow_store_path: str | None = None
     repository_path: str | None = None
-    github_token: str | None = None
-    github_repository: str | None = None
-    github_base_branch: str = "main"
-    llm_provider: str = "gemini"
+    github_base_branch: str | None = None
+    cors_origins: str = "http://localhost:5173"
 
 
 @lru_cache
 def get_settings() -> Settings:
-    return Settings()
+    settings = Settings()
+    if not settings.gemini_model_low:
+        object.__setattr__(settings, "gemini_model_low", settings.gemini_model)
+    if not settings.gemini_model_medium:
+        object.__setattr__(settings, "gemini_model_medium", settings.gemini_model)
+    if not settings.gemini_model_high:
+        object.__setattr__(settings, "gemini_model_high", settings.gemini_model)
+    return settings
